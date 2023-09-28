@@ -1,5 +1,5 @@
 
-Bun.serve({
+const server = Bun.serve({
   port: 769759,
   async fetch(req: Request) {
     const url = new URL(req.url);
@@ -21,3 +21,5 @@ Bun.serve({
     return new Response('Not Found', { status: 404 });
   },
 });
+
+console.log(`Listening on ${server.hostname}:${server.port}`);
