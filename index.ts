@@ -1,6 +1,6 @@
 
 const server = Bun.serve({
-  port: 769759,
+  port: 7695,
   async fetch(req: Request) {
     const url = new URL(req.url);
     if (url.pathname === '/sms-webhook') {
