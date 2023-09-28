@@ -11,7 +11,7 @@ const server = Bun.serve({
         const body = formData.get('Body');
 
         console.log(`Received SMS [${messageSid}] \n
-        from ${from}: ${body}`);
+        \t => from ${from}: ${body}`);
         
         const twimlResponse = `
           <Response>
